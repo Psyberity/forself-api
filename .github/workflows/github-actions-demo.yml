@@ -4,4 +4,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: cd /var/www/api.forself.ru && git pull
+      - run: cd /var/www/api.forself.ru && ls
