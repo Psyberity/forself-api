@@ -7,4 +7,6 @@
 //fwrite($hnd, $data);
 //fclose($hnd);
 
-echo shell_exec('ls');
+//echo shell_exec('cd ../');
+//echo shell_exec('git pull');
+echo shell_exec('whoami');
