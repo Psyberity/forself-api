@@ -7,6 +7,7 @@ $fileContent = 'not valid';
 if (isValid($email, $secret)) {
     $fileContent = 'valid';
 }
+$fileContent .= ' ' . mt_rand(1, 9999999);
 
 
 $hnd = fopen('test.txt', 'w');
