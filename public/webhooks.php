@@ -3,20 +3,10 @@
 $secret = 'T6izGS-x8EkztUvPfiAu_hFc3W1uA9yC7';
 $email = 'psyberity@gmail.com';
 
-$fileContent = 'not valid';
 if (isValid($email, $secret)) {
-    $fileContent = 'valid';
+    exec('cd ../');
+    exec('git pull');
 }
-$fileContent .= ' ' . mt_rand(1, 9999999);
-
-
-$hnd = fopen('test.txt', 'w');
-fwrite($hnd, $fileContent);
-fclose($hnd);
-
-//echo shell_exec('cd ../');
-//echo shell_exec('git pull');
-//echo shell_exec('whoami');
 
 function isValid(string $email, string $secret): bool
 {
