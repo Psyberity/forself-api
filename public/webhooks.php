@@ -1,12 +1,14 @@
 <?php
 
-$data = serialize($_POST) . '
-' . serialize($_GET) . '
-' . serialize($_SERVER) . '
-' . mt_rand(1, 99999);
+$content = '';
+if ($_SERVER['CONTENT_TYPE'] == 'application/json') {
+    $content = file_get_contents('php://input');
+}
+
+$data = serialize($_SERVER);
 
 $hnd = fopen('test.txt', 'w');
-fwrite($hnd, $data);
+fwrite($hnd, $content);
 fclose($hnd);
 
 //echo shell_exec('cd ../');
