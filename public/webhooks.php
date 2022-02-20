@@ -25,7 +25,7 @@ function isValid(string $email, string $secret): bool
     if (!isset($_SERVER['CONTENT_TYPE'])) return false;
     if ($_SERVER['CONTENT_TYPE'] !== 'application/json') return false;
 
-    $content = file_get_contents('php://input');
+    /*$content = file_get_contents('php://input');
     if(empty($content)) return false;
 
     $data = json_decode($content, true);
@@ -37,5 +37,5 @@ function isValid(string $email, string $secret): bool
     $algo = $hashData[0];
     $hash = $hashData[1];
     if (!in_array($algo, hash_algos(), true)) return false;
-    if (!hash_equals($hash, hash_hmac($algo, $content, $secret))) return false;
+    if (!hash_equals($hash, hash_hmac($algo, $content, $secret))) return false;*/
 }
