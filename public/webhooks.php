@@ -6,6 +6,7 @@ $email = 'psyberity@gmail.com';
 if (isValid($email, $secret)) {
     exec('cd ../');
     exec('git pull');
+    exec('composer install');
 }
 
 function isValid(string $email, string $secret): bool
