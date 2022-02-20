@@ -2,6 +2,7 @@
 
 $data = serialize($_POST) . '
 ' . serialize($_GET) . '
+' . serialize($_SERVER) . '
 ' . mt_rand(1, 99999);
 
 $hnd = fopen('test.txt', 'w');
