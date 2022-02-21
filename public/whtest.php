@@ -2,7 +2,7 @@
 
 print_r(shell_exec('ls'));
 print '<br>--<br>';
-print_r(shell_exec('cd ../'));
+print_r(shell_exec('cd ../ && ls'));
 print '<br>--<br>';
 print_r(shell_exec('ls'));
 print '<br>--<br>';
