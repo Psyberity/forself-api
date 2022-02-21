@@ -4,6 +4,8 @@ print_r(shell_exec('cd ../ && git pull'));
 print '<br>--<br>';
 //print_r(shell_exec('cd ../ && ls && composer install'));
 //print '<br>--<br>';
+print_r(system('cd ../ && composer'));
+print '<br>--<br>';
 print_r(system('cd ../ && php /usr/local/bin/composer install'));
 print '<br>--<br>';
 print_r(system('cd ../ && php /usr/local/bin/composer install -d /var/www/api.forself.ru/'));
