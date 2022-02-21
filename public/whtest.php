@@ -1,7 +1,7 @@
 <?php
 
-print shell_exec('cd ../');
-print '<br>';
-print shell_exec('git pull');
-print '<br>';
-print shell_exec('composer install');
+print_r(shell_exec('cd ../'));
+print '<br>--<br>';
+print_r(shell_exec('git pull'));
+print '<br>--<br>';
+print_r(shell_exec('composer install'));
