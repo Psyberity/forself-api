@@ -4,8 +4,9 @@ $secret = 'T6izGS-x8EkztUvPfiAu_hFc3W1uA9yC7';
 $email = 'psyberity@gmail.com';
 
 if (isValid($email, $secret)) {
-    exec('cd ../ && git pull');
-    exec('cd ../ && composer install');
+    exec('cd ../webhooks/ && php main.php');
+    //exec('cd ../ && git pull');
+    //exec('cd ../ && composer install');
 }
 
 function isValid(string $email, string $secret): bool
