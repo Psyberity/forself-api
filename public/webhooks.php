@@ -1,12 +1,9 @@
 <?php
-// TO-DO: move out of public
-$secret = 'T6izGS-x8EkztUvPfiAu_hFc3W1uA9yC7';
-$email = 'psyberity@gmail.com';
 
-if (isValid($email, $secret)) {
+$config = require_once('../webhooks/config.php');
+
+if (isValid($config['email'], $config['secret'])) {
     exec('cd ../webhooks/ && php main.php');
-    //exec('cd ../ && git pull');
-    //exec('cd ../ && composer install');
 }
 
 function isValid(string $email, string $secret): bool
